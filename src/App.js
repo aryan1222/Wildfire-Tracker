@@ -2,6 +2,7 @@ import Map from './components/Map';
 import {useEffect, useState} from 'react';
 import Loader from './components/Loader';
 import axios from 'axios';
+import Header from './components/Header';
 
 function App() {
 
@@ -29,6 +30,7 @@ function App() {
 
   return (
     <div>
+        <Header/>
         {isLoading ? <Loader/> : <Map eventData={eventData}/>}
     </div>
   );
